@@ -13,17 +13,21 @@ class Solution {
     public static void bubbleSort(int arr[]) {
         // code here
         int n=arr.length;
-        for(int i=n-2;i>=0;i--)
+        
+        for(int i=n-1;i>=1;i--)
         {
-            for(int j=0;j<=i;j++)
+            int swap=0;
+            for(int j=0;j<=i-1;j++)
             {
                 if(arr[j]>arr[j+1])
                 {
                     int temp=arr[j];
                     arr[j]=arr[j+1];
                     arr[j+1]=temp;
+                    swap=1;
                 }
             }
+            if(swap==0) break;
         }
     }
 }
